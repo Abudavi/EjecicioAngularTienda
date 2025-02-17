@@ -3,17 +3,11 @@
     <div class="form-group text-center">
         <ul class="list-group">
             @for (producto of productos; track producto) {
-                <li class="list-group-item">{{producto.descripcion}}, ${{producto.precio}}</li>
+            <li class="list-group-item">{{producto.descripcion}}, ${{producto.precio}}</li>
+
             }
         </ul>
     </div>
-
-        <h3 class="m-10 text-success">Agregar nuevo producto</h3>
-
-    <div class="d-flex justify-content-center">
-        <input class="m-1" type="text" #inputNombreProducto  id="inputNombreProducto" placeholder="Nombre del producto" [(ngModel)]="nombreProducto"  />
-        <input class="form-input m-1" type="text" #inputPrecioProducto id="inputPrecioProducto" placeholder="Precio del producto" [(ngModel)]="precioProducto"/>
-        <button class="btn btn-primary m-1" (click)="agregarProducto();inputNombreProducto.value='';inputPrecioProducto.value=''">Agregar nuevo producto</button>
-    </div>
+    <app-formulario-producto (nuevoProducto)="agregarProducto($event)"></app-formulario-producto>
 
 </div>
