@@ -1,0 +1,13 @@
+<div class="container text-center">
+
+    <h3 class="m-10 text-success">Agregar nuevo producto</h3>
+
+    <div class="d-flex justify-content-center">
+        <input class="m-1" type="text" #inputNombreProducto id="inputNombreProducto"
+            placeholder="Nombre del producto" />
+        <input class="form-input m-1" type="text" #inputPrecioProducto id="inputPrecioProducto"
+            placeholder="Precio del producto" />
+        <button class="btn btn-primary m-1" (click)="agregarProducto($event)">Agregar nuevo producto</button>
+    </div>
+
+</div>
